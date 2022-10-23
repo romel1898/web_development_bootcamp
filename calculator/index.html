@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="center">
+            <div>
+                <label for="txtFirstNumber" class="numberLabel"><b>first number</b></label><br>
+                <input id="txtFirstNumber" type="number" value="" name="txtFirstNumber" class="numberBoxes" autofocus="on" required onchange="validNumber(this.value, 'txtFirstNumber')" />
+            </div>
+
+            <div>
+                <label for="txtSecondNumber" class="numberLabel"><b>second number</b></label><br>
+                <input id="txtSecondNumber" type="number" value="" name="txtSecondNumber" class="numberBoxes" required onchange="validNumber(this.value, 'txtSecondNumber')" />
+            </div>
+        </div>
+        <div class="center">
+            <div class="operationList">
+
+                <input type="radio" id="add" name="operation" value="add" checked>
+                <label for="Add">Add</label>
+
+                <input type="radio" id="subtract" name="operation" value="subtract">
+                <label for="Subtract">Subtract</label>
+
+                <input type="radio" id="multiply" name="operation" value="multiply">
+                <label for="Multiply">Multiply</label>
+
+                <input type="radio" id="divide" name="operation" value="divide" />
+                <label for="Divide">Divide</label>
+            </div>
+        </div>
+        <div class="center">
+            <div >
+                <button class="blueButton" id="btnCalculate">=</button>
+            </div>
+            <div >
+                <button class="grayButton" id="btnClear">Clear</button>
+            </div>
+        </div>
+        <div class="center">
+            <label id="lblResult" class="hideResult"></label>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
